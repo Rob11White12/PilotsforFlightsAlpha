@@ -1,0 +1,68 @@
+<section ng-controller="HomeController"> 
+	<div class="jumbotron text-center">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+				<img alt="BetaPilotsLogo" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<p class="lead">
+				Bringing Pilots (Beta Testers) and TestFlights (Apps in the Beta stage) together
+			</p>
+		</div>
+		<div class="row">
+			<p>
+				<a class="btn btn-primary btn-lg" href="#!/flights" target="_self">Find TestFlights</a>
+			</p>
+		</div>
+		<div class="row">
+			<p>
+				<a class="btn btn-primary btn-lg" href="#!/pilots" target="_self">Find Beta Pilots</a>
+			</p>
+		</div>
+		<span style="font-size:4.5em;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+	</div>
+	<div class="row">
+		<h2 class="text-center">Here's how it works</h2>
+		<div class="col-md-4 text-center">
+			<h3>
+				<a href="/#!/signin">Sign In</a> or <a href="/#!/signup">Sign Up</a>
+			</h3>
+			<p>Using your personalised log in details or your favourite social account (facebook, twitter et al).</p>
+			<img src="/modules/core/img/Key.jpg" alt="key" class="img-rounded">
+		</div>
+		<div class="col-md-4 text-center">
+			<h3>
+				<a href="/#!/flights">Browse</a>
+			</h3>
+			<p>Through the available test flights as a Pilot and then request to join the Beta stage of available TestFlights.</p>
+			<img src="/modules/core/img/Browse.jpg" alt="browse" class="img-rounded">
+		</div>
+		<div class="col-md-4 text-center">
+			<h3>
+				<a href="/#!/pilots">Choose</a>
+			</h3>
+			<p>The Pilots you want to assist in your Beta stage and request that they join your TestFlight.</p>
+			<img src="/modules/core/img/Choose.jpg" alt="choose" class="img-rounded">
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default text-center" data-ng-controller="Stem4allsController" data-ng-init="find()">
+			<h2 class="panel-heading panel-success">
+			Fancy some light reading?
+			</h2>
+			<div class="panel-body">
+			<p>
+			Have a read through our <a href="/#!/stem4alls"><strong>STEM4ALL</strong></a> Blog. The idea being that anyone can gain an insight into and take snippets from the world of STEM and advances in technology. 
+			</p>
+			</div>
+			<h3>
+			Here's a little taster of our most recent article
+			</h3>
+			<a style="text-decoration: none" data-ng-repeat="stem4all in stem4alls | limitTo:-1 | orderBy:'time':true" data-ng-href="#!/stem4alls/{{stem4all._id}}">We called it <strong><span data-ng-bind="stem4all.title"></span></strong> and this is what its about: 
+			<strong><span data-ng-bind="stem4all.body | limitTo:400"></span></strong></a>
+			</div>
+		</div>
+		</div>
+	</section>
